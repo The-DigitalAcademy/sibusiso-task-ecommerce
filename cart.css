@@ -3,9 +3,14 @@
     --bodyBg: #eee;
     --white: #fff;
     --bodyColor: rgb(63, 63, 63);
-    --primary: rgb(159, 13, 139);
+    --primary: rgb(45, 13, 159);
     --transition: ease-in-out 300ms;
     --gold: rgb(255, 157, 0);
+  }
+
+  .carts h1{
+    background: #fff;
+    border-radius: 5px;
   }
   
   /* RESET general style ************/
@@ -72,7 +77,7 @@
   
   a,
   .active {
-    color: var(--primary);
+    color: red;
   }
   
   /* PRODUCT IN HOME PAGE **********/
@@ -248,7 +253,7 @@
     }
   
     .product img:hover {
-      transform: scale(1.1);
+      transform: scale(1.0);
     }
   
     .product .product__name {
@@ -273,12 +278,13 @@
       font-weight: bold;
       border: solid 1px var(--bodyColor);
       transition: var(--transition);
+      border-radius: 10px;
     }
   
     .product button:hover {
       background-color: var(--primary);
       color: var(--white);
-      transform: scale(1.04);
+      transform: scale(1.02);
       border: solid 1px var(--primary);
       -webkit-box-shadow: 0px 10px 13px -7px #000000,
         -50px -50px 0px -30px rgba(0, 0, 0, 0);
