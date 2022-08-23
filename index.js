@@ -82,10 +82,12 @@ var productsArray = [
 ]
 
 
-// function addAllcart() { 
- 
-//   console.log('it working');
-// }
+function addAllcart() {
+  productsOnscreen();
+
+
+  console.log('it working');
+}
 
 
 //PRODUCTS SHOW 
@@ -95,6 +97,11 @@ function productsOnscreen() {
     countCart = document.getElementById('countCart')
 
     countCart.innerHTML = ""
+
+    for (let i = 0; i < productsArray.length; i++) {
+      countCart.innerHTML += `${productsArray[i].cart}`
+      
+    }
 
     for (let i = 0; i < productsArray.length; i++) {
         sneakerProduct.innerHTML += 
@@ -112,7 +119,7 @@ function productsOnscreen() {
         ${'<span>*</span>'.repeat(productsArray[i].rates)}
         </div>
         <div class="product__price">R <span>${productsArray[i].money}</span></div>
-        <button ">+ ADD TO CART</button>
+        <button onclick="addAllcart()">+ ADD TO CART</button>
       </div>`
         
     }
