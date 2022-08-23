@@ -88,6 +88,16 @@
     gap: 1rem;
   }
   
+  .productC img{
+    width: 250px;
+    height: 100%;
+  }
+
+  .carts h3{
+    border: solid 2px white;
+
+    height: 100%;
+  }
   .product {
     width: 100%;
     height: 22rem;

@@ -5,41 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sibusiso-task-ecommerce</title>
-    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
 
-    <div class="logo">Denim shopping</div>
     <div class="container">
     <nav>
-        <a href="./cart.html" class="active">Home</a>
-        <a href="#">Cart: <span>0</span></a>
+        <a href="./index.html" class="active">Home</a>
+        <a href="./cart.html">Cart: <span id="countCart">0</span></a>
     </nav>
-
-    <section class="products" id="sneakerProducts">
-        <div class="product">
-          <div class="product__img">
-            <img
-              src="https://sneakernews.com/wp-content/uploads/2020/03/new-balance-1500-animal-pack-brown-2.jpg?w=1140"
-              alt=""
-            />
-          </div>
-
-          <div class="product__name">New Balance 1500</div>
-          <div class="product__rate">
-            <span>*</span><span>*</span><span>*</span><span>*</span>
-          </div>
-          <div class="product__price">R <span>1799</span></div>
-          <button onclick="addCart()">+ ADD TO CART</button>
-        </div>
-      </section>
-      <br><br><br><br><br>
-      <div class="carts">
-        <h1>Cart items</h1>
-        <span class="cartsI" id="cartsI"></span>
-      </div>
-     
-       </div>
-    <script src="./cart.js"></script>
+    </div>
+    
+    <script src="./index.js"></script>
 </body>
 </html>
