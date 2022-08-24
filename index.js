@@ -1,8 +1,10 @@
 
 // JS CONNECTS TO HTML ELEMENTS
-var sneakerProduct = document.getElementById('sneakerProducts');
+var sneakerProducts = document.getElementById('sneakerProducts');
 var displayAmount = document.getElementById('displayAmount');
+var cartItems = document.getElementById('cartItems')
 
+console.log('sneakerProducts');
 
 
 // VARIABLES
@@ -35,7 +37,7 @@ var productsArray = [
 },
 
 {
-  no: 1,
+  no: 4,
   name: 'New Balance 15',
   rates: 5,
   money: 2100,
@@ -44,7 +46,7 @@ var productsArray = [
 },
 
 {
-  no: 1,
+  no: 5,
   name: 'New Balance Blue',
   rates: 3,
   money: 2500,
@@ -53,7 +55,7 @@ var productsArray = [
 },
 
 {
-  no: 1,
+  no: 6,
   name: 'New Balance Fire',
   rates: 4,
   money: 1100,
@@ -62,7 +64,7 @@ var productsArray = [
 },
 
 {
-  no: 1,
+  no: 7,
   name: 'New Balance VS',
   rates: 5,
   money: 1000,
@@ -71,7 +73,7 @@ var productsArray = [
 },
 
 {
-  no: 1,
+  no: 8,
   name: 'New Balance 44',
   rates: 4,
   money: 1200,
@@ -86,19 +88,18 @@ var cartCounter = 0;
 function allAddcart() {
   
   counter = document.getElementById('counter').innerHTML = ++ cartCounter;
-  console.log(cartCounter);
+  productsOnscreen();
 }
-
 
 
 //PRODUCTS SHOW 
 function productsOnscreen() {
 
-    // display products on Home page
-    sneakerProduct.innerHTML = ""
+    sneakerProducts.innerHTML = ""
 
+    // productsArray runs into loop to show
     for (let i = 0; i < productsArray.length; i++) {
-        sneakerProduct.innerHTML += 
+        sneakerProducts.innerHTML += 
         
         `<div class="product">
         <div class="product__img">
@@ -118,7 +119,7 @@ function productsOnscreen() {
         
     }
 
-    
-    
+    cartItems.innerHTML = "";
+
 }
 productsOnscreen();
