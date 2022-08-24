@@ -81,21 +81,15 @@ var productsArray = [
 
 ]
 
-//variables in cart
 var cartCounter = 0;
 
 function allAddcart() {
-
+  
   counter = document.getElementById('counter');
-
-
-  for (let cartCounter = 0; cartCounter < 9; cartCounter++) {
-    
-  }
 
   console.log(cartCounter);
 
-   productsOnscreen();
+   
 }
 
 
@@ -127,6 +121,10 @@ function productsOnscreen() {
         
     }
 
-    counter.innerHTML =++ cartCounter;
+    for (let cartCounter = 0; cartCounter < 9; cartCounter++) {
+      counter.innerHTML =++ cartCounter;
+
+    }
+    
 }
 productsOnscreen();
