@@ -1,7 +1,7 @@
 
 // JS CONNECTS TO HTML ELEMENTS
-var sneakerProduct = document.getElementById('sneakerProducts')
-var displayAmount = document.getElementById('displayAmount')
+var sneakerProduct = document.getElementById('sneakerProducts');
+var displayAmount = document.getElementById('displayAmount');
 
 
 
@@ -81,27 +81,30 @@ var productsArray = [
 
 ]
 
+//variables in cart
+var cartCounter = 0;
 
-function addAllcart() {
-  productsOnscreen();
+function allAddcart() {
+
+  counter = document.getElementById('counter');
 
 
-  console.log('it working');
+  for (let cartCounter = 0; cartCounter < 9; cartCounter++) {
+    
+  }
+
+  console.log(cartCounter);
+
+   productsOnscreen();
 }
+
 
 
 //PRODUCTS SHOW 
 function productsOnscreen() {
+
+    // display products on Home page
     sneakerProduct.innerHTML = ""
-
-    countCart = document.getElementById('countCart')
-
-    countCart.innerHTML = ""
-
-    for (let i = 0; i < productsArray.length; i++) {
-      countCart.innerHTML += `${productsArray[i].cart}`
-      
-    }
 
     for (let i = 0; i < productsArray.length; i++) {
         sneakerProduct.innerHTML += 
@@ -119,9 +122,11 @@ function productsOnscreen() {
         ${'<span>*</span>'.repeat(productsArray[i].rates)}
         </div>
         <div class="product__price">R <span>${productsArray[i].money}</span></div>
-        <button onclick="addAllcart()">+ ADD TO CART</button>
+        <button onclick="allAddcart()">+ ADD TO CART</button>
       </div>`
         
     }
+
+    counter.innerHTML =++ cartCounter;
 }
 productsOnscreen();
