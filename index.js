@@ -85,11 +85,8 @@ var cartCounter = 0;
 
 function allAddcart() {
   
-  counter = document.getElementById('counter');
-
+  counter = document.getElementById('counter').innerHTML = ++ cartCounter;
   console.log(cartCounter);
-
-   
 }
 
 
@@ -121,10 +118,7 @@ function productsOnscreen() {
         
     }
 
-    for (let cartCounter = 0; cartCounter < 9; cartCounter++) {
-      counter.innerHTML =++ cartCounter;
-
-    }
+    
     
 }
 productsOnscreen();
