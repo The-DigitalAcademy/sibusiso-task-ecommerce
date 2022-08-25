@@ -90,12 +90,6 @@ var productImage;
 var cartArray = [];
 
 
-function isConfirm(value) {
-  if (!value) {
-    return false;
-  }
-  return true;
-}
 
 function allAddcart() {
   
@@ -156,9 +150,9 @@ function productsOnscreen() {
 
           <div class="product__name">${productsArray[x].name}</div>
           <div class="product__rate">
-          
+          ${'<span>*</span>'.repeat(productsArray[x].rates)}
           </div>
-          <div class="product__price">R <span>${cartArray[x].money}</span></div>
+          <div class="product__price">R <span>${productsArray[x].money}</span></div>
           
         </div>
       `
