@@ -1,11 +1,10 @@
 
 // JS CONNECTS TO HTML ELEMENTS
-var sneakerProducts = document.getElementById('sneakerProducts');
 var displayAmount = document.getElementById('displayAmount');
 var cartItems = document.getElementById('cartItems')
 
 console.log('sneakerProducts');
-
+  
 
 // VARIABLES
 var productsArray = [
@@ -88,6 +87,13 @@ var cartCounter = 0;
 function allAddcart() {
   
   counter = document.getElementById('counter').innerHTML = ++ cartCounter;
+
+
+  sneakerProducts = document.getElementById('sneakerProducts').value;
+
+  productsArray.push();
+
+
   productsOnscreen();
 }
 
@@ -118,8 +124,30 @@ function productsOnscreen() {
       </div>`
         
     }
-
+  // Cart items show in Home page below 
     cartItems.innerHTML = "";
+
+    for (let x = 0; x < productsArray.length; x++) {
+
+      cartItems.innerHTML = `
+      <div class="productC">
+          <div class="product__img">
+            <img
+              src='${productsArray[x].image}'
+              alt=""
+            />
+          </div>
+
+          <div class="product__name">${productsArray[x].name}</div>
+          <div class="product__rate">
+          
+          </div>
+          <div class="product__price">R <span>${productsArray[x].money}</span></div>
+          
+        </div>
+      `
+      
+    }
 
 }
 productsOnscreen();
