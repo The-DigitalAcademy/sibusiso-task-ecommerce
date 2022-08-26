@@ -87,6 +87,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  .cartbtn{
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+  }
+
+  .cartbtn:hover{
+    transform: scale(1.2);
+  }
   
   .productC img{
     width: 250px;
