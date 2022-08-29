@@ -130,6 +130,8 @@ function productsOnscreen() {
       </div>`
         
     }
+
+    counter.innerHTML = cartCounter;
 }
 
 function cartOnScreen() {
@@ -161,7 +163,7 @@ function cartOnScreen() {
       `
     }
 
-    counter.innerHTML = cartCounter;
+
 }
 productsOnscreen();
 cartOnScreen();
