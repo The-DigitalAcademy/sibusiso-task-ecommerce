@@ -2,6 +2,7 @@
 // JS CONNECTS TO HTML ELEMENTS
 var sneakerProducts = document.getElementById('sneakerProducts');
 var displayAmount = document.getElementById('displayAmount');
+var counter = document.getElementById('counter');
   
 
 // VARIABLES
@@ -72,7 +73,6 @@ var productsArray = [
 ]
 
 
-var cartCounter = 0;
 var productMoney = 0;
 var productName;
 var productRates;
@@ -81,12 +81,12 @@ var productImage;
 var cartArray = [];
 
 
-function calculate() {}
+var cartCounter = 0;
 
 
 function allAddcart() {
   
-  counter = document.getElementById('counter').innerHTML = ++ cartCounter;
+  cartCounter += 1;
 
   cartArray.push({name: productName,rates: productRates,money: productMoney,image: '',})
 
@@ -160,6 +160,8 @@ function cartOnScreen() {
         <ul/>
       `
     }
+
+    counter.innerHTML = cartCounter;
 }
 productsOnscreen();
 cartOnScreen();
