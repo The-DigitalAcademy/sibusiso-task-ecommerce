@@ -77,8 +77,11 @@ var productMoney = 0;
 var productName;
 var productRates;
 var productImage;
+
 var cartArray = [];
 
+
+function calculate() {}
 
 
 function allAddcart() {
@@ -97,7 +100,7 @@ function removeCart() {
   cartItems = document.getElementById('cartItems')
 
    cartArray.shift();
-   
+
     cartOnScreen();
 }
 
@@ -106,7 +109,7 @@ function productsOnscreen() {
 
     sneakerProducts.innerHTML = ""
 
-    // productsArray runs into loop to show
+    // productsArray into loop to show
     for (let i = 0; i < productsArray.length; i++) {
         sneakerProducts.innerHTML += 
         
@@ -127,16 +130,13 @@ function productsOnscreen() {
       </div>`
         
     }
-
-
-
 }
 
 function cartOnScreen() {
   
     cartItems.innerHTML = ""
 
-    // Cart items show in Home page below 
+    // cart items into loop to show below
     for (let x = 0; x < cartArray.length; x++) {
 
       cartItems.innerHTML = `
@@ -160,7 +160,6 @@ function cartOnScreen() {
         <ul/>
       `
     }
-
 }
 productsOnscreen();
 cartOnScreen();
