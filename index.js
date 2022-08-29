@@ -2,13 +2,11 @@
 // JS CONNECTS TO HTML ELEMENTS
 var sneakerProducts = document.getElementById('sneakerProducts');
 var displayAmount = document.getElementById('displayAmount');
-var cartItems = document.getElementById('cartItems')
   
 
 // VARIABLES
 var productsArray = [
   {
-    no: 1,
     name: 'New Balance 1500',
     rates: 4,
     money: 1800,
@@ -17,7 +15,6 @@ var productsArray = [
 },
 
 {
-  no: 2,
   name: 'New Balance 997',
   rates: 3,
   money: 1300,
@@ -26,7 +23,6 @@ var productsArray = [
 },
 
 {
-  no: 3,
   name: 'New Balance 57',
   rates: 4,
   money: 1500,
@@ -35,7 +31,6 @@ var productsArray = [
 },
 
 {
-  no: 4,
   name: 'New Balance 15',
   rates: 5,
   money: 2100,
@@ -44,7 +39,6 @@ var productsArray = [
 },
 
 {
-  no: 5,
   name: 'New Balance Blue',
   rates: 3,
   money: 2500,
@@ -53,7 +47,6 @@ var productsArray = [
 },
 
 {
-  no: 6,
   name: 'New Balance Fire',
   rates: 4,
   money: 1100,
@@ -62,7 +55,6 @@ var productsArray = [
 },
 
 {
-  no: 7,
   name: 'New Balance VS',
   rates: 5,
   money: 1000,
@@ -71,7 +63,6 @@ var productsArray = [
 },
 
 {
-  no: 8,
   name: 'New Balance 44',
   rates: 4,
   money: 1200,
@@ -94,15 +85,20 @@ function allAddcart() {
   
   counter = document.getElementById('counter').innerHTML = ++ cartCounter;
 
-  cartArray.push({no: cartArray.length +1,name: productName,rates: productRates,money: productMoney,image: '',})
+  cartArray.push({name: productName,rates: productRates,money: productMoney,image: '',})
 
   productsOnscreen();
   cartOnScreen();
 }
 
-function removeCart(cart) {
-  document.getElementById('cart').remove;
- 
+// remove the cart into cartArray
+function removeCart() {
+
+  cartItems = document.getElementById('cartItems')
+
+   cartArray.shift();
+   
+    cartOnScreen();
 }
 
 //PRODUCTS SHOW 
@@ -137,9 +133,10 @@ function productsOnscreen() {
 }
 
 function cartOnScreen() {
-    // Cart items show in Home page below 
-    cartItems.innerHTML = "";
+  
+    cartItems.innerHTML = ""
 
+    // Cart items show in Home page below 
     for (let x = 0; x < cartArray.length; x++) {
 
       cartItems.innerHTML = `
