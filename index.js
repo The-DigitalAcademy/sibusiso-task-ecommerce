@@ -94,6 +94,18 @@ function allAddcart() {
   cartOnScreen();
 }
 
+// function calculate() {
+//   for (let i = 0; i < cartArray.length; i++) {
+//     if (productsArray[i].name = '') {
+//       productMoney += productsArray[i].money;
+      
+//     }
+    
+//   }
+
+//   total = money + money;
+// }
+
 // remove the cart into cartArray
 function removeCart() {
 
@@ -133,8 +145,10 @@ function productsOnscreen() {
 }
 
 function cartOnScreen() {
+
+  displayAmount.innerHTML = "";
   
-    cartItems.innerHTML = ""
+    cartItems.innerHTML = "";
 
     // cart items into loop to show below
     for (let x = 0; x < cartArray.length; x++) {
@@ -160,6 +174,7 @@ function cartOnScreen() {
         <ul/>
       `
     }
+    displayAmount.innerHTML = '0'
 
     counter.innerHTML = cartCounter;
 }
