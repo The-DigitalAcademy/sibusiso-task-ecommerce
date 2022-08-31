@@ -94,17 +94,11 @@ function allAddcart() {
   cartOnScreen();
 }
 
-// function calculate() {
-//   for (let i = 0; i < cartArray.length; i++) {
-//     if (productsArray[i].name = '') {
-//       productMoney += productsArray[i].money;
-      
-//     }
-    
-//   }
+function calculate() {
 
-//   total = money + money;
-// }
+
+productsOnscreen();
+}
 
 // remove the cart into cartArray
 function removeCart() {
@@ -153,7 +147,7 @@ function cartOnScreen() {
     // cart items into loop to show below
     for (let x = 0; x < cartArray.length; x++) {
 
-      cartItems.innerHTML = `
+      cartItems.innerHTML += `
       <ul class="productC">
           <div class="product__img">
             <img
@@ -174,7 +168,7 @@ function cartOnScreen() {
         <ul/>
       `
     }
-    displayAmount.innerHTML = '0'
+    displayAmount.innerHTML = `R${productMoney}`;
 
     counter.innerHTML = cartCounter;
 }
