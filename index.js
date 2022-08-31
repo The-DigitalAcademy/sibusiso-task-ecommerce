@@ -81,12 +81,8 @@ var productImage;
 var cartArray = [];
 
 
-var cartCounter = 0;
-
-
 function allAddcart() {
   
-  cartCounter += 1;
 
   cartArray.push({name: productName,rates: productRates,money: productMoney,image: '',})
 
@@ -95,9 +91,9 @@ function allAddcart() {
 }
 
 function calculate() {
+   productMoney = 0;
 
-
-productsOnscreen();
+ 
 }
 
 // remove the cart into cartArray
@@ -170,7 +166,7 @@ function cartOnScreen() {
     }
     displayAmount.innerHTML = `R${productMoney}`;
 
-    counter.innerHTML = cartCounter;
+    counter.innerHTML = cartArray.length;
 }
 productsOnscreen();
 cartOnScreen();
