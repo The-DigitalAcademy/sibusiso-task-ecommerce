@@ -3,6 +3,9 @@
 var sneakerProducts = document.getElementById('sneakerProducts');
 var displayAmount = document.getElementById('displayAmount');
 var counter = document.getElementById('counter');
+var priceCart = document.getElementById('priceCart');
+
+priceCart.innerHTML = ''
   
 
 // VARIABLES
@@ -89,19 +92,9 @@ function allAddcart() {
   cartOnScreen();
 }
 
-// function calculate() {
-//    productMoney = 0;
-   
-//    for (let i = 0; i < productsArray.length; i++) {
-//     if (productsArray[i].money == productMoney) {
-//       productMoney += productsArray[i].money
-//     }
-    
-//    }
-
-//  productMoney = productMoney + productMoney;
+function calculate() {
  
-// }
+}
 
 // remove the cart into cartArray
 function removeCart() {
