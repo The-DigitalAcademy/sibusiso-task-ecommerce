@@ -91,10 +91,10 @@ function allAddcart() {
 // }
 
 // remove the cart into cartArray
-function removeCart(index) {
+function removeCart(i) {
 
   cartItems = document.getElementById('cartItems');
-   cartArray.shift(index);
+   cartArray.splice(i, 1);
     cartOnScreen();
 }
 
