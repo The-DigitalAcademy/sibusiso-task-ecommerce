@@ -1,12 +1,10 @@
 
 // JS CONNECTS TO HTML ELEMENTS
 var sneakerProducts = document.getElementById('sneakerProducts');
-var displayAmount = document.getElementById('displayAmount');
+var totalA = document.getElementById('displayAmount');
 var counter = document.getElementById('counter');
 var priceCart = document.getElementById('priceCart');
 
-priceCart.innerHTML = ''
-  
 
 // VARIABLES
 var productsArray = [
@@ -76,31 +74,27 @@ var productsArray = [
 ]
 
 
-productMoney = 0;
-var productName;
-var productRates;
-var productImage;
-
 var cartArray = [];
+totalA = 0;
 
 
 function allAddcart() {
 
-  cartArray.push({name: productName,rates: productRates,money: productMoney,image: '',})
+  cartArray.push({name: '', rates: '', money: '', image: '',})
 
   productsOnscreen();
   cartOnScreen();
 }
 
-function calculate() {
- 
-}
+// function calculate() {
+//   totalA = 0;
+// }
 
 // remove the cart into cartArray
-function removeCart() {
+function removeCart(index) {
 
   cartItems = document.getElementById('cartItems');
-   cartArray.shift();
+   cartArray.shift(index);
     cartOnScreen();
 }
 
@@ -134,27 +128,26 @@ function productsOnscreen() {
 
 function cartOnScreen() {
 
-  displayAmount.innerHTML = "";
   
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
-    for (let x = 0; x < cartArray.length; x++) {
+    for (let i = 0; i < cartArray.length; i++) {
 
       cartItems.innerHTML += `
       <ul class="productC">
           <div class="product__img">
             <img
-              src='${productsArray[x].image}'
+              src='${productsArray[i].image}'
               alt=""
             />
           </div>
 
-          <div class="product__name">${productsArray[x].name}</div>
+          <div class="product__name">${productsArray[i].name}</div>
           <div class="product__rate">
-          ${'<span>*</span>'.repeat(productsArray[x].rates)}
+          ${'<span>*</span>'.repeat(productsArray[i].rates)}
           </div>
-          <div class="product__price">R <span>${productsArray[x].money}</span></div>
+          <div class="product__price">R <span>${productsArray[i].money}</span></div>
           <button class="cartbtn" onclick="removeCart()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
           <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
@@ -163,9 +156,12 @@ function cartOnScreen() {
       `
     }
 
-    displayAmount.innerHTML = `R${productMoney}`;
+    displayAmount.innerHTML = ""; 
+
+    displayAmount.innerHTML = `R${totalA}`;
 
     counter.innerHTML = cartArray.length;
 }
 productsOnscreen();
 cartOnScreen();
+
