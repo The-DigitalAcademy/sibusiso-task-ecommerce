@@ -74,7 +74,6 @@ var productsArray = [
 
 
 productMoney = 0;
-totalPrice = 0;
 var productName;
 var productRates;
 var productImage;
@@ -83,31 +82,26 @@ var cartArray = [];
 
 
 function allAddcart() {
-  calculate();
 
   cartArray.push({name: productName,rates: productRates,money: productMoney,image: '',})
-
-  if (sneakerProducts) {
-    alert('You alreday have add cart in item')
-  }
 
   productsOnscreen();
   cartOnScreen();
 }
 
-function calculate() {
-   productMoney = 0;
+// function calculate() {
+//    productMoney = 0;
    
-   for (let i = 0; i < productsArray.length; i++) {
-    if (productsArray[i].money == productMoney) {
-      productMoney += productsArray[i].money
-    }
+//    for (let i = 0; i < productsArray.length; i++) {
+//     if (productsArray[i].money == productMoney) {
+//       productMoney += productsArray[i].money
+//     }
     
-   }
+//    }
 
- productMoney = productMoney + productMoney;
+//  productMoney = productMoney + productMoney;
  
-}
+// }
 
 // remove the cart into cartArray
 function removeCart() {
