@@ -88,7 +88,14 @@ totalA = 0;
 
 function allAddcart() {
 
-  cartArray.push({ no: productsArray.length + 1 ,no: '', name: '', rates: '', money: '', image: '',})
+  if (cartItems) {
+    cartArray.push({
+      no: productsArray.length + 1,
+      name: '', 
+      rates: '', 
+      money: '', 
+      image: '',});
+  }
 
   productsOnscreen();
   cartOnScreen();
