@@ -9,6 +9,7 @@ var priceCart = document.getElementById('priceCart');
 // VARIABLES
 var productsArray = [
   {
+    no: 1,
     name: 'New Balance 1500',
     rates: 4,
     money: 1800,
@@ -17,6 +18,7 @@ var productsArray = [
 },
 
 {
+  no: 2,
   name: 'New Balance 997',
   rates: 3,
   money: 1300,
@@ -25,6 +27,7 @@ var productsArray = [
 },
 
 {
+  no:3,
   name: 'New Balance 57',
   rates: 4,
   money: 1500,
@@ -33,6 +36,7 @@ var productsArray = [
 },
 
 {
+  no:4,
   name: 'New Balance 15',
   rates: 5,
   money: 2100,
@@ -41,6 +45,7 @@ var productsArray = [
 },
 
 {
+  no:5,
   name: 'New Balance Blue',
   rates: 3,
   money: 2500,
@@ -49,6 +54,7 @@ var productsArray = [
 },
 
 {
+  no:6,
   name: 'New Balance Fire',
   rates: 4,
   money: 1100,
@@ -57,6 +63,7 @@ var productsArray = [
 },
 
 {
+  no:7,
   name: 'New Balance VS',
   rates: 5,
   money: 1000,
@@ -65,6 +72,7 @@ var productsArray = [
 },
 
 {
+  no:8,
   name: 'New Balance 44',
   rates: 4,
   money: 1200,
@@ -80,7 +88,7 @@ totalA = 0;
 
 function allAddcart() {
 
-  cartArray.push({name: '', rates: '', money: '', image: '',})
+  cartArray.push({ no: productsArray.length + 1 ,no: '', name: '', rates: '', money: '', image: '',})
 
   productsOnscreen();
   cartOnScreen();
