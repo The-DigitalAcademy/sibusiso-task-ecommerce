@@ -96,19 +96,17 @@
 
   .displayCart {
     padding-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
   .btnCart{
     width: 100px;
     height: 2rem;
-    border-radius: 5px;
-    margin-top: 2px;
+    border-radius: 10px;
     border: solid 1px;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: bold;
   }
   .carts h3{
     border: solid 2px white;
@@ -130,24 +128,21 @@
   }
 
   .product1 {
-    width: 100%;
-    height: 22rem;
+    width: 19rem;
+    height: 19rem;
     padding-bottom: 1rem;
-    grid-template-columns: auto auto auto auto;
     display: grid;
     flex-direction: column;
+    /* grid-template-columns: auto auto auto auto; */
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.3rem;
     border: solid 1px var(--white);
-    margin-left: auto;
-    margin-right: auto;
+    transition: var(--transition);
   }
-
   
   .product:hover {
     transform: scale(1.04);
-    
   }
 
   .product .product__img {
@@ -160,8 +155,6 @@
     width: 100%;
     height: 10rem;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .product img {
@@ -169,8 +162,6 @@
     height: 10rem;
     object-fit: cover;
     transition: var(--transition);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .product1 img {
@@ -193,7 +184,7 @@
 
   .product1 .product__name {
     font-size: 1rem;
-    text-align: center;
+    font-weight: bold;
   }
   
   .product .product__price {
@@ -205,8 +196,6 @@
   .product1 .product__price {
     font-size: 1.3rem;
     font-weight: bold;
-    margin-top: -1.5rem;
-    text-align: center;
   }
 
   
@@ -214,13 +203,6 @@
     font-size: 3rem;
     color: var(--gold);
     cursor: pointer;
-  }
-
-  .product1 .product__rate {
-    font-size: 3rem;
-    color: var(--gold);
-    cursor: pointer;
-    text-align: center;
   }
   
   .product button {

@@ -91,8 +91,7 @@ function allAddcart() {
   if (cartItems) {
     cartArray.push({
       no: productsArray.length + 1,
-      name: '', 
-      rates: '', 
+      name: '',
       money: '', 
       image: '',});
   }
@@ -158,8 +157,6 @@ function cartOnScreen() {
       </div>
 
       <div class="product__name">${productsArray[i].name}</div>
-      <div class="product__rate">${'<span>*</span>'.repeat(productsArray[i].rates)}
-      </div>
       <div class="product__price">R <span>${productsArray[i].money}</span></div>
       <button class="btnCart" onclick="removeCart()">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
