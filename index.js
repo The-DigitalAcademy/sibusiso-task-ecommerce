@@ -81,8 +81,11 @@ var productsArray = [
 },
 ]
 
-
 var cartArray = [];
+var cartNo = 0;
+var productsName;
+var productsMoney = 0;
+var productsImage;
 totalA = 0;
 
 
@@ -90,10 +93,10 @@ function allAddcart() {
 
   if (cartItems) {
     cartArray.push({
-      no: productsArray.length + 1,
-      name: '',
-      money: '', 
-      image: '',});
+      no: cartNo,
+      name: productsName,
+      money: productsMoney, 
+      image: productsImage,});
   }
 
   productsOnscreen();
@@ -110,6 +113,7 @@ function removeCart() {
 //Total carts
 function calculate() {
   totalA = 0;
+
 }
 
 //PRODUCTS SHOW 
@@ -141,8 +145,6 @@ function productsOnscreen() {
 }
 
 function cartOnScreen() {
-
-  
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
