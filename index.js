@@ -89,16 +89,9 @@ var productsImage;
 totalA = 0;
 
 
-function allAddcart() {
+function allAddcart(i) {
 
-  if (cartItems) {
-    cartArray.push({
-      no: cartNo,
-      name: productsName,
-      money: productsMoney, 
-      image: productsImage,});
-  }
-
+    cartArray.push(productsArray[i])
   productsOnscreen();
   cartOnScreen();
 }
@@ -110,11 +103,11 @@ function removeCart(i) {
     cartOnScreen();
 }
 
-//Total carts
-function calculate() {
-  totalA = 0;
+// //Total carts
+// function calculate() {
+//   totalA = 0;
 
-}
+// }
 
 //PRODUCTS SHOW 
 function productsOnscreen() {
@@ -138,7 +131,7 @@ function productsOnscreen() {
         ${'<span>*</span>'.repeat(productsArray[i].rates)}
         </div>
         <div class="product__price">R <span>${productsArray[i].money}</span></div>
-        <button onclick="allAddcart()">+ ADD TO CART</button>
+        <button onclick="allAddcart(${i})">+ ADD TO CART</button>
       </div>`
         
     }
@@ -155,13 +148,13 @@ function cartOnScreen() {
       <div class="shopbox">
       <div class="product__img">
         <img
-          src="${productsArray[i].image}"
+          src="${cartArray[i].image}"
           alt=""
         />
       </div>
 
-      <div class="product__name">${productsArray[i].name}</div>
-      <div class="product__price">R<span>${productsArray[i].money}</span></div>
+      <div class="product__name">${cartArray[i].name}</div>
+      <div class="product__price">R<span>${cartArray[i].money}</span></div>
       <button class="btnCart" onclick="removeCart(${i})">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
       <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
