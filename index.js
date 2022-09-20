@@ -82,16 +82,17 @@ var productsArray = [
 ]
 
 var cartArray = [];
-var cartNo = 0;
 var productsName;
 var productsMoney = 0;
 var productsImage;
-totalA = 0;
+var totalA = 0;
 
 
 //ADD NEW CARTS IN FUNCTION
 function allAddcart(i) {
   cartArray.push(productsArray[i])
+
+  calculate();
   productsOnscreen();
   cartOnScreen();
 }
@@ -100,12 +101,24 @@ function allAddcart(i) {
 function removeCart(i) {
   cartItems = document.getElementById('cartItems');
   cartArray.splice(i,1);
+
+  calculate()
   cartOnScreen();
 }
 
 // //TOTAL CARTS
 function calculate() {
   totalA = 0;
+  money = 0;
+
+  for (let i = 0; i < productsArray.length; i++) {
+    if (productsArray[i].money) {
+      totalA += productsArray[i].priceCart;
+    }
+    
+  }
+
+  totalA = totalA + money
 
 }
 
