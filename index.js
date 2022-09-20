@@ -89,29 +89,29 @@ var productsImage;
 totalA = 0;
 
 
+//ADD NEW CARTS IN FUNCTION
 function allAddcart(i) {
-
-    cartArray.push(productsArray[i])
+  cartArray.push(productsArray[i])
   productsOnscreen();
   cartOnScreen();
 }
 
-// remove the cart into cartArray
+// REMOVE FROM CARTARRAY
 function removeCart(i) {
   cartItems = document.getElementById('cartItems');
-   cartArray.splice(i,1);
-    cartOnScreen();
+  cartArray.splice(i,1);
+  cartOnScreen();
 }
 
-// //Total carts
-// function calculate() {
-//   totalA = 0;
+// //TOTAL CARTS
+function calculate() {
+  totalA = 0;
 
-// }
+}
 
-//PRODUCTS SHOW 
+
+////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
-
     sneakerProducts.innerHTML = ""
 
     // productsArray into loop to show
@@ -137,6 +137,7 @@ function productsOnscreen() {
     }
 }
 
+//DISPLAY SECOND CARTS BELOW IN FUNCTION
 function cartOnScreen() {
     cartItems.innerHTML = "";
 
