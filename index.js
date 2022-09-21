@@ -109,16 +109,15 @@ function removeCart(i) {
 // //TOTAL CARTS
 function calculate() {
   totalA = 0;
-  money = 0;
 
-  for (let i = 0; i < productsArray.length; i++) {
-    if (productsArray[i].money) {
-      totalA += productsArray[i].priceCart;
+  for (let i = 0; i < cartArray.length; i++) {
+    if (cartArray[i].money) {
+      totalA += cartArray[i].money;
     }
     
   }
 
-  totalA = totalA + money
+  console.log(totalA);
 
 }
 
