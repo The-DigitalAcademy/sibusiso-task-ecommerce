@@ -82,9 +82,6 @@ var productsArray = [
 ]
 
 var cartArray = [];
-var productsName;
-var productsMoney = 0;
-var productsImage;
 var totalA = 0;
 
 
@@ -116,8 +113,6 @@ function calculate() {
     }
     
   }
-
-  console.log(totalA);
 
 }
 
