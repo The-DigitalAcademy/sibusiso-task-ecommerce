@@ -117,6 +117,7 @@ function calculate() {
 }
 
 
+
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
     sneakerProducts.innerHTML = ""
