@@ -3,7 +3,6 @@
 var sneakerProducts = document.getElementById('sneakerProducts');
 var totalA = document.getElementById('displayAmount');
 var counter = document.getElementById('counter');
-var priceCart = document.getElementById('priceCart');
 
 
 // VARIABLES
@@ -111,12 +110,8 @@ function calculate() {
     if (cartArray[i].money) {
       totalA += cartArray[i].money;
     }
-    
   }
-
 }
-
-
 
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
@@ -144,6 +139,7 @@ function productsOnscreen() {
         
     }
 }
+
 
 //DISPLAY SECOND CARTS BELOW IN FUNCTION
 function cartOnScreen() {
