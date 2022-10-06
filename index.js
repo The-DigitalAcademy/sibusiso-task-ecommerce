@@ -120,6 +120,11 @@ function toSavelocalstorage() {
   localStorage.setItem('cartArray', dataSL)
 }
 
+function textOnlocalstorage() {
+  var dataSL = JSON.parse(localStorage.getItem('cartArray'))
+  cartArray = dataSL
+}
+
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
     sneakerProducts.innerHTML = ""
@@ -150,6 +155,8 @@ function productsOnscreen() {
 
 //DISPLAY SECOND CARTS BELOW IN FUNCTION
 function cartOnScreen() {
+  textOnlocalstorage();
+  
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
