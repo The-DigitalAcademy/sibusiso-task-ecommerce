@@ -89,6 +89,7 @@ function allAddcart(i) {
   cartArray.push(productsArray[i])
 
   calculate();
+  toSavelocalstorage();
   productsOnscreen();
   cartOnScreen();
 }
@@ -98,7 +99,8 @@ function removeCart(i) {
   cartItems = document.getElementById('cartItems');
   cartArray.splice(i,1);
 
-  calculate()
+  calculate();
+  toSavelocalstorage();
   cartOnScreen();
 }
 
@@ -111,6 +113,11 @@ function calculate() {
       totalA += cartArray[i].money;
     }
   }
+}
+
+function toSavelocalstorage() {
+  var dataSL = JSON.stringify(cartArray)
+  localStorage.setItem('cartArray', dataSL)
 }
 
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
