@@ -89,9 +89,8 @@ function allAddcart(i) {
   cartArray.push(productsArray[i])
 
   calculate();
-  toSavelocalstorage();
-  productsOnscreen();
   cartOnScreen();
+  toSavelocalstorage();
 }
 
 // REMOVE FROM CARTARRAY
@@ -100,8 +99,8 @@ function removeCart(i) {
   cartArray.splice(i,1);
 
   calculate();
-  toSavelocalstorage();
   cartOnScreen();
+  toSavelocalstorage();
 }
 
 // //TOTAL CARTS
@@ -115,11 +114,13 @@ function calculate() {
   }
 }
 
+//Save data into local storage
 function toSavelocalstorage() {
   var dataSL = JSON.stringify(cartArray)
   localStorage.setItem('cartArray', dataSL)
 }
 
+//Read data from local storage
 function textOnlocalstorage() {
   var dataSL = JSON.parse(localStorage.getItem('cartArray'))
   cartArray = dataSL
@@ -155,7 +156,6 @@ function productsOnscreen() {
 
 //DISPLAY SECOND CARTS BELOW IN FUNCTION
 function cartOnScreen() {
-  textOnlocalstorage();
   
     cartItems.innerHTML = "";
 
@@ -185,9 +185,7 @@ function cartOnScreen() {
     }
 
     displayAmount.innerHTML = ""; 
-
     displayAmount.innerHTML = `R${totalA}`;
-
     counter.innerHTML = cartArray.length;
 }
 productsOnscreen();
