@@ -156,7 +156,7 @@ function productsOnscreen() {
 
 //DISPLAY SECOND CARTS BELOW IN FUNCTION
 function cartOnScreen() {
-  
+
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
@@ -189,5 +189,6 @@ function cartOnScreen() {
     counter.innerHTML = cartArray.length;
 }
 productsOnscreen();
+textOnlocalstorage()
 cartOnScreen();
 
