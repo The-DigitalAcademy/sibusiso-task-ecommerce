@@ -89,8 +89,6 @@ function allAddcart(i) {
   cartArray.push(productsArray[i])
 
   calculate();
-  toSavelocalstorage();
-  textOnlocalstorage();
   productsOnscreen();
   cartOnScreen();
 }
@@ -101,8 +99,6 @@ function removeCart(i) {
   cartArray.splice(i,1);
 
   calculate();
-  toSavelocalstorage();
-  textOnlocalstorage();
   productsOnscreen();
   cartOnScreen();
 }
@@ -118,21 +114,9 @@ function calculate() {
   }
 }
 
-//Save data into local storage
-function toSavelocalstorage() {
-  var dataSL = JSON.stringify(cartArray)
-  localStorage.setItem('cartArray', dataSL)
-}
-
-// Read data from local storage
-function textOnlocalstorage() {
-  var dataSL = JSON.parse(localStorage.getItem('cartArray'))
-  cartArray = dataSL
-}
-
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
-    textOnlocalstorage();
+    
     sneakerProducts.innerHTML = ""
 
     // productsArray into loop to show
@@ -161,7 +145,7 @@ function productsOnscreen() {
 
 //FUNCTION DISPLAYED SECOND CARTS BELOW
 function cartOnScreen() {
-  textOnlocalstorage();
+
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
