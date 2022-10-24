@@ -89,8 +89,10 @@ function allAddcart(i) {
   cartArray.push(productsArray[i])
 
   calculate();
-  cartOnScreen();
   toSavelocalstorage();
+  textOnlocalstorage();
+  productsOnscreen();
+  cartOnScreen();
 }
 
 // REMOVE FROM CARTARRAY
@@ -99,8 +101,10 @@ function removeCart(i) {
   cartArray.splice(i,1);
 
   calculate();
-  cartOnScreen();
   toSavelocalstorage();
+  textOnlocalstorage();
+  productsOnscreen();
+  cartOnScreen();
 }
 
 // //TOTAL CARTS
@@ -120,7 +124,7 @@ function toSavelocalstorage() {
   localStorage.setItem('cartArray', dataSL)
 }
 
-//Read data from local storage
+// Read data from local storage
 function textOnlocalstorage() {
   var dataSL = JSON.parse(localStorage.getItem('cartArray'))
   cartArray = dataSL
@@ -128,6 +132,7 @@ function textOnlocalstorage() {
 
 ////DISPLAY FIRST PRODUCTS BELOW IN FUNCTION
 function productsOnscreen() {
+    textOnlocalstorage();
     sneakerProducts.innerHTML = ""
 
     // productsArray into loop to show
@@ -151,12 +156,12 @@ function productsOnscreen() {
       </div>`
         
     }
+    counter.innerHTML = cartArray.length;
 }
 
-
-//DISPLAY SECOND CARTS BELOW IN FUNCTION
+//FUNCTION DISPLAYED SECOND CARTS BELOW
 function cartOnScreen() {
-
+  textOnlocalstorage();
     cartItems.innerHTML = "";
 
     // cart items into loop to show below
@@ -183,12 +188,8 @@ function cartOnScreen() {
   </div>
     </div>`
     }
-
-    displayAmount.innerHTML = ""; 
     displayAmount.innerHTML = `R${totalA}`;
-    counter.innerHTML = cartArray.length;
 }
 productsOnscreen();
-textOnlocalstorage()
 cartOnScreen();
 
